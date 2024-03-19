@@ -24,38 +24,76 @@
         <div class="row" id="navigasi">
             <ul class="nav">
                 <li class="nav-item">
-                  <a class="nav-link active" aria-current="page" href="#">Active</a>
+                  <a class="nav-link active" aria-current="page" href="#" onclick="navigation('profile')">Profile</a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" href="#">Link</a>
+                  <a class="nav-link" href="#" onclick="navigation('edu')">Education</a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" href="#">Link</a>
+                  <a class="nav-link" href="#" onclick="navigation('exp')">Experience</a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link disabled" aria-disabled="true">Disabled</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" href="#">Active</a>
-                </li>
-                <li class="nav-item">
-                <a class="nav-link" href="#">Link</a>
-                </li>
-                <li class="nav-item">
-                <a class="nav-link" href="#">Link</a>
-                </li>
-                <li class="nav-item">
-                <a class="nav-link disabled" aria-disabled="true">Disabled</a>
-                </li>
-                <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="#">Active</a>
-                </li>
-                <li class="nav-item">
-                <a class="nav-link" href="#">Link</a>
+                  <a class="nav-link" href="#" onclick="navigation('skills')">Skills</a>
                 </li>
             </ul>
         </div>
+        <div class="row" id="profile">
+          <table class="table">
+            <tbody>
+              <tr>
+                <th scope="row">Tempat Lahir</th>
+                <td>Tasikmalaya</td>
+              </tr>
+              <tr>
+                <th scope="row">Tanggal Lahir</th>
+                <td>22 Juli 1996</td>
+              </tr>
+              <tr>
+                <th scope="row">Kewarganegraan</th>
+                <td>Indonesia</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="row" id="education">
+          <div class="card" style="width: 18rem;">
+            <img src="..." class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">Card title</h5>
+              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+              <a href="#" class="btn btn-primary">Go somewhere</a>
+            </div>
+          </div>
+        </div>
+        <div class="row" id="experience">
+            ini experience
+        </div>
+        <div class="row" id="skills">
+            ini skill
+        </div>
     </div>
+    <script>
+        function navigation(id){
+          // alert('Cek id: '+id);
+          if(id === 'profile'){
+            document.getElementById('profile').style.display = 'block';
+            document.getElementById('education').style.display = 'none';
+            document.getElementById('experience').style.display = 'none';
+            document.getElementById('skills').style.display = 'none';
+          }else if(id === 'edu'){
+            document.getElementById('education').style.display = 'block';
+            document.getElementById('profile').style.display = 'none';
+            document.getElementById('experience').style.display = 'none';
+            document.getElementById('skills').style.display = 'none';
+          }else if(id === 'exp'){
+            document.getElementById('experience').style.display = 'block';
+            document.getElementById('profile').style.display = 'none';
+            document.getElementById('education').style.display = 'none';
+            document.getElementById('skills').style.display = 'none';
+          }
+          
+        }
+    </script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
   </body>
 </html>
